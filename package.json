@@ -1,0 +1,18 @@
+{
+  "name": "cra-template-nxtuple",
+  "version": "1.0.0",
+  "description": "The Redux+JS template for Create React App.",
+  "main": "template.json",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jayasurian123/cra-template-nxtuple"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  },
+  "files": [
+    "template",
+    "template.json"
+  ]
+}
