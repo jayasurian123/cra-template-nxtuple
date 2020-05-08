@@ -1,2 +1,1 @@
-# cra-template-nxtuple
-Create react redux template
+# Custom React redux template
