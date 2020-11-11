@@ -1,13 +1,17 @@
 module.exports = {
   parser: 'babel-eslint',
-  extends: ['airbnb', 'plugin:jest/recommended'],
-  plugins: ['jest'],
+  extends: [
+    'react-app',
+    'plugin:react/recommended',
+    'plugin:jest/recommended',
+    'plugin:sonarjs/recommended'
+  ],
+  plugins: ['jest', 'sonarjs', 'react-hooks'],
   env: {
     browser: true,
     node: true,
     'jest/globals': true
   },
-
   rules: {
     // disabled for condition && someFunc()
     'no-unused-expressions': 'off',
