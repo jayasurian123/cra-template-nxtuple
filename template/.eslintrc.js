@@ -3,10 +3,10 @@ module.exports = {
   extends: [
     'react-app',
     'plugin:react/recommended',
-    'plugin:jest/recommended',
-    'plugin:sonarjs/recommended'
+    'plugin:jest/recommended'
+    // 'plugin:sonarjs/recommended'
   ],
-  plugins: ['jest', 'sonarjs', 'react-hooks'],
+  plugins: ['jest', 'react-hooks' /*'sonarjs'*/],
   env: {
     browser: true,
     node: true,
