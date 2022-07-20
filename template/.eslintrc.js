@@ -1,5 +1,4 @@
 module.exports = {
-  parser: 'babel-eslint',
   extends: [
     'react-app',
     'plugin:react/recommended',

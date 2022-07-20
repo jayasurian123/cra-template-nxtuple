@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
-import { ReactRouterGlobalHistory } from 'react-router-global-history';
+import { HashRouter, Route, Routes } from 'react-router-dom';
+import { ReactRouterGlobalNavigation } from './helpers/ReactRouterGlobalNavigation';
 // import { getSession } from './helpers/localStorageHelper';
 
 const WelcomeScreen = lazy(() => import('./screens/WelcomeScreen'));
@@ -12,9 +12,9 @@ const ProtectedLayout = () => {
 
   return (
     <>
-      <Switch>
-        <Route exact path="/" component={WelcomeScreen} />
-      </Switch>
+      <Routes>
+        <Route exact path="/" element={<WelcomeScreen />} />
+      </Routes>
     </>
   );
 };
@@ -31,11 +31,11 @@ const App = () => {
   return (
     <HashRouter>
       <div>
-        <ReactRouterGlobalHistory />
+        <ReactRouterGlobalNavigation />
         <Suspense fallback={<div>Loading...</div>}>
-          <Switch>
-            <Route path="/" component={ProtectedLayout} />
-          </Switch>
+          <Routes>
+            <Route path="*" element={<ProtectedLayout />} />
+          </Routes>
         </Suspense>
       </div>
     </HashRouter>

@@ -1,5 +1,6 @@
-export const INCREASE_COUNTER = '[counter] increase';
-export const DECREASE_COUNTER = '[counter] decrease';
+const prefix = 'counter';
+export const INCREASE_COUNTER = `${prefix}/increaseCounter`;
+export const DECREASE_COUNTER = `${prefix}/decreaseCounter`;
 
 export const increaseCounter = (count) => ({
   type: INCREASE_COUNTER,

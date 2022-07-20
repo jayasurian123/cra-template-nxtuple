@@ -1,30 +1,38 @@
 {
   "package": {
     "dependencies": {
-      "@reduxjs/toolkit": "^1.1.0",
-      "@testing-library/jest-dom": "^4.2.4",
-      "@testing-library/react": "^9.3.2",
-      "@testing-library/user-event": "^7.1.2",
-      "react-redux": "^7.1.3",
-      "spacetime": "^6.4.3",
-      "classnames": "^2.2.6",
-      "react-router-global-history": "^1.1.0",
-      "react-router-dom": "^5.1.2",
-      "axios": "0.19.2",
-      "redux-mock-store": "^1.5.4",
-      "eslint-plugin-jest": "^23.9.0",
-      "eslint-config-airbnb": "^18.1.0",
-      "eslint-plugin-import": "^2.20.2",
-      "stylelint": "^13.3.3",
-      "stylelint-config-css-modules": "^2.2.0",
-      "stylelint-config-standard": "^20.0.0",
-      "stylelint-scss": "^3.17.2"
+      "react-redux": "^8.0.1",
+      "spacetime": "^7.1.4",
+      "classnames": "^2.3.1",
+      "react-router-dom": "^6.3.0",
+      "axios": "^0.27.2"
     },
     "scripts": {
+      "test:cov": "react-scripts test --coverage --watchAll=false",
       "lint": "npm run prettier && npm run lint:js && npm run lint:css",
       "prettier": "prettier 'src/**/**/*.?(js)' --write",
       "lint:js": "eslint src --ext .js --cache --fix || true",
-      "lint:css": "stylelint 'src/**/*.css' --cache --fix || true"
+      "lint:css": "stylelint 'src/**/*.css' --cache --fix || true",
+      "jsreport": "eslint src --ext .js --cache -f json -o eslint-report.json; exit 0",
+      "cssreport": "stylelint 'src/**/*.css' --cache -f json -o stylelint-report.json; exit 0"
+    },
+    "devDependencies": {
+      "eslint-plugin-jest": "^26.5.3",
+      "eslint-plugin-import": "^2.26.0",
+      "stylelint": "^14.9.1",
+      "stylelint-config-css-modules": "^4.1.0",
+      "stylelint-config-standard": "^26.0.0",
+      "stylelint-scss": "^4.3.0",
+      "redux-mock-store": "^1.5.4",
+      "@reduxjs/toolkit": "^1.8.1",
+      "@testing-library/jest-dom": "^5.16.4",
+      "@testing-library/react": "^13.0.1",
+      "@testing-library/user-event": "^14.1.1"
+    },
+    "jest": {
+      "coverageReporters": ["html", "lcov"],
+      "coveragePathIgnorePatterns": [],
+      "resetMocks": false
     }
   }
 }

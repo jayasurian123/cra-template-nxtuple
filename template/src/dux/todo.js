@@ -1,5 +1,6 @@
-export const FETCH_TODO = '[todo] fetch';
-export const SET_TODO = '[todo] set';
+const prefix = 'todo';
+export const FETCH_TODO = `${prefix}/fetchTodo`;
+export const SET_TODO = `${prefix}/setTodo`;
 
 export const fetchTodo = (id) => ({
   type: FETCH_TODO,
